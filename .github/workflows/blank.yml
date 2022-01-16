@@ -28,7 +28,7 @@ jobs:
       - name: Decrypt
         run: gpg --quiet --batch --yes --decrypt --passphrase="${{ secrets.TOKEN }}" --output ./Koshelek.postman_collection.json ./Koshelek.postman_collection.json.gpg
 
-      - uses: anthonyvscode/newman-action@v1.1
+      - uses: matt-ball/newman-action@64419a64bd84915e081828373fb872be6def2712
         with:
           collection: Koshelek.postman_collection.json
 
